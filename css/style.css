@@ -247,6 +247,7 @@ body {
 
 .leftvinos {
     font-family: fira_sansbold;
+    margin: 0;
 }
 
 .newsfeed__all-news-link {
@@ -269,17 +270,21 @@ body {
     margin-left: 5px;
 }
 
-#logo:after {
-    content: "";
-    background-image: url(../img/nd-sidebar-logo.png);
-    background-size: cover;
-    height: 824px;
-    width: 112px;
+.sidebar-logo {
+    width: 990px;
     display: block;
-    z-index: 2;
-    position: fixed;
-    margin-left: -18px;
-    margin-top: 110px;
+    margin: 0 auto;
+}
+
+.sidebar-logo-img {
+    position: absolute;
+    margin: 110px 0 0 -153px;
+}
+
+.header_main-block {
+    padding: 0;
+    margin: 0;
+    width: 330px;
 }
 
 @media (max-width: 1280px) {
