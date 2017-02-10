@@ -269,6 +269,19 @@ body {
     margin-left: 5px;
 }
 
+#logo:after {
+    content: "";
+    background-image: url(../img/nd-sidebar-logo.png);
+    background-size: cover;
+    height: 824px;
+    width: 112px;
+    display: block;
+    z-index: 2;
+    position: fixed;
+    margin-left: -18px;
+    margin-top: 110px;
+}
+
 @media (max-width: 1280px) {
     .news-block {
         width: 290px;
