@@ -1,0 +1,232 @@
+body {
+	background: #fff url(/img/sky.png) top center repeat-x;
+	font: 13px/18px Arial,Helvetica,sans-serif;
+	font-size: 13px;
+	line-height: 19px;
+}
+
+.veryslow {
+	-webkit-transition-duration: 500s !important;
+	-moz-transition-duration: 500s !important;
+	-o-transition-duration: 500s !important;
+	-ms-transition-duration: 500s !important;
+	transition-duration: 500s !important;
+}
+
+.cloudmoved
+{
+	background-position: -861px 0;
+}
+
+a {
+	color: #de2f04;
+	text-decoration: none;
+}
+
+#frame {
+	min-height: 700px;
+	background: transparent url(/img/mountains.png) top center no-repeat;
+}
+
+.menuline {
+	background: #f4f3f0;
+	
+	background-image: linear-gradient(bottom, rgb(199,199,199) 19%, rgb(250,250,250) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(199,199,199) 19%, rgb(250,250,250) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(199,199,199) 19%, rgb(250,250,250) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(199,199,199) 19%, rgb(250,250,250) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(199,199,199) 19%, rgb(250,250,250) 100%);
+	
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #b2afa8;
+	border-right: 0px solid #dcdcdc;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+a.menuitem 
+{
+	display: block;
+	float: left;
+	
+	line-height: 38px;
+	color: #333;
+	text-decoration: none;
+	
+	padding-left: 17px;
+	padding-right: 17px;
+	border-right: 1px solid #dcdcdc;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: sans-serif;
+}
+.menuitem:first-child {
+	border-left: 1px solid #dcdcdc;
+} 
+a.menuitem:hover {
+	color: #f0f0f0;
+	background-color: #de2f04;
+	box-shadow: 0 0 15px rgba(0,0,0,0.4) inset;
+}
+.menuitem.active {
+	background-color: #de2f04;
+	color: #fff;
+	box-shadow: 0 0 15px rgba(0,0,0,0.4) inset;
+}
+
+.circlehold {
+	position: relative; width: 310px; height: 186px;
+}
+.circlehold2 {
+	position: relative; width: 565px; height: 350px;
+}
+.circlehold a, .circlehold2 a {
+	text-decoration: none;
+	display: block;
+	height: 100%;
+}
+.pcircle {
+	position: absolute; width: 186px; height: 186px; border-radius: 186px; 
+	border: 2px solid #f9f6ea;
+}
+.cSingle {
+	left: 55px;
+}
+.c1 {
+	left: 0;
+	z-index: 2;
+}
+.c2 {
+	right: 0;
+	z-index: 1;
+}
+.c1:hover {
+	transform: scale(1.1) rotate(10deg);
+	-webkit-transform: scale(1.1) rotate(10deg);
+}
+.c2:hover {
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+}
+
+.pcircle2 {
+	position: absolute; width: 350px; height: 350px; border-radius: 350px; 
+	border: 7px solid white;
+}
+
+
+.perperson
+{
+	position: absolute; bottom: 0; right: 0;
+}
+
+.perpersonicon
+{
+	font-weight: bold;
+	color: #555;
+	padding-left: 12px; background: transparent url('/img/mans.png') 0 50% no-repeat;
+}
+
+.productline {
+	border-top: 1px solid #e6e1dc;
+	border-bottom: 0px solid #e6e1dc;
+	font-size: 9px;
+	color: #666;
+	line-height: 140%;
+	padding-top: 5px;
+}
+.productline h3 {
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	text-align: center;
+	font-weight: normal;
+	line-height: 120%;
+	margin-top: 3px;
+	margin-bottom: 5px;
+}
+.productline h3 a {
+	color: #de2f04;
+	text-decoration: none;
+}
+.priceline
+{
+	color: #de2f04;
+	font-size: 20px;
+	line-height: 120%;
+}
+.weightline
+{
+	color: #777;
+	font-size: 20px;
+	line-height: 120%;
+}
+
+span.uah
+{
+	font-size: 70%;
+}
+span.kg
+{
+	font-size: 70%;
+}
+
+.orderbut {
+	border: 0px solid #ccc;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 20px;
+	font-size: 12px;
+	background: #de2f04;
+	color: #fff;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5) inset;
+	/* box-shadow: 1px 1px 5px rgba(0,0,0,0.3); */
+	text-shadow: 1px 1px 1px #900;
+	cursor: pointer;
+}
+
+.width80p {
+	width: 80%;
+}
+
+.orderprice
+{
+	color: #777;
+}
+
+.productline2 h1 {
+	line-height: 120%;
+	margin-bottom: 10px;
+}
+
+.productcomponents
+{
+	font-size: 10px;
+	color: #666;
+	line-height: 130%;
+}
+.productcomponent {
+	border-radius: 30px;
+}
+
+.oldpos {
+	right: 330px; top: 20px;
+}
+.newpos {
+	right: 30px; top: 10px;
+}
+
+
+@keyframes myanimation {
+    from { }
+    50% { transform: translate(2px,3px) rotate(1deg); }
+    to { transform: translate(0px,0px) rotate(0deg); }
+}
+@-webkit-keyframes myanimation {
+	0%{ -webkit-transform: rotate(0deg); }
+    50%{ -webkit-transform: translate(2px,3px) rotate(1deg); }
+    100%{ -webkit-transform: translate(0px,0px) rotate(0deg); }
+}
+#shar {
+    animation: myanimation 2s ease-in-out infinite alternate;
+    -webkit-animation: myanimation 2s ease-in-out infinite alternate;
+}

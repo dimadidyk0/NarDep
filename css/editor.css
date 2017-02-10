@@ -1,0 +1,21 @@
+/* Site rules */
+
+body, td, pre 
+{
+	color: #000; 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px; 
+	margin: 8px;
+}
+
+li {margin: 8px;}
+
+/* TinyMCE specific rules */
+body.mceContentBody {
+   background: #fff;
+}
+
+.mceContentBody a {
+   color: blue !important; /* FF requires a important here */
+}
+ 
