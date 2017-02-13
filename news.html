@@ -5,22 +5,23 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Один такой на свете / Выводы</title>
+    <title>Новости</title>
 
-    <meta name="viewport" content="width=1024" />
 
-    <link rel='stylesheet' type='text/css' href='css/gcform.css' media='screen' />
-    <link rel='stylesheet' type='text/css' href='css/gcgrid.css' media='screen' />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--
     <script type="text/javascript" src="/goldcut/js/gcdom.js"></script>
     <script type="text/javascript" src="/js/site.js"></script>-->
 
     <link rel='stylesheet' type='text/css' href='css/site.css' media='screen' />
-    <link rel='stylesheet' type='text/css' href='css/style.css' media='screen' />
+    <link rel='stylesheet' type='text/css' href='css/gcgrid.css' media='screen' />
+    <link rel='stylesheet' type='text/css' href='css/gcform.css' media='screen' />
+    <link rel="stylesheet" href="css/style.css">
 
 
-    <script type="text/javascript" src="/lib/js/mootools/mootools-core.js"></script>
+    <!--<script type="text/javascript" src="/lib/js/mootools/mootools-core.js"></script>
     <script type="text/javascript" src="/goldcut/js/goldcut.js"></script>
     <script type="text/javascript" src="/goldcut/js/gcdom.js"></script>
 
@@ -30,13 +31,12 @@
 
     <script type="text/javascript" src="/goldcut/js/stacktrace.js"></script>
     <script type="text/javascript" src="/goldcut/js/gcdom.js"></script>
-    <script type="text/javascript" src="/js/site.js"></script>
+    <script type="text/javascript" src="/js/site.js"></script>-->
 
 </head>
 
 <body>
-
-    <div class="FW WBG" style="position: fixed; z-index: 1000;">
+    <div class="FW WBG fixed-block">
 
         <div class="CW TAL" id="relc">
             <ul id="topmenu">
@@ -58,301 +58,206 @@
         </div>
 
     </div>
-    <!--<div class="FW reg" id="reg">
-    <div class="reg-head" >
-        <div>
-            <div class="reg-head-div"><h1>Регистрация</h1></div>
-            <div class="reg-head-butt" id="reg-butt"> x </div>
-            <br style="clear: both">
-        </div>
-
-        <form action="/member/register" method="post" id="member-register" class="gcform">
-
-            <label for="email"><b>Ваше имя</b></label> <input type="text" name="name" class="forminput" value=""><br>
-            <label for="email"><b>Ваш e-mail</b></label> <input type="text" name="email" class="forminput" value=""><br>
-            <label for="email"><b>Пароль</b></label> <input type="password" name="providedpassword" class="forminput" value=""><br>
-            <label for="email"><b>Пароль (повторите)</b></label> <input type="password" name="providedpasswordcopy" class="forminput" value=""><br>
-            <input type="hidden" name="path" class="forminput" value="/article/356591895/Odin-takoy-na-svete"><br>
-
-            
-            <br>
-
-
-            <div class='formcontrols'>
-                <input type="submit" value="Регистрация" class="leftfloat">
-                <div class="leftfloat leftpad1 controlinfo"></div>
-                <div class="rightfloat controlstatus"></div>
-                <br style="clear: both;">
-            </div>
-
-        </form>
-
-
+    <div class="sidebar-logo desctop-block">
+        <img src="img/nd-sidebar-logo.png" alt="" class="sidebar-logo-img">
     </div>
-</div>
-
-
-
-
-<div class="FW log" id="log">
-    <div class="reg-head" >
-        <div>
-            <div class="reg-head-div"><h1>Вход</h1></div>
-            <div class="reg-head-butt" id="log-butt"> x </div>
-            <br style="clear: both">
-        </div>
-
-        <form action="/member/login" method="post" id="member-login" class="gcform">
-
-            <label for="email">E-mail</label><input type="text" name="email" class="forminput" value="">
-            <br>
-            <label for="password">Пароль</label><input type="password" name="password" class="forminput" value="">
-
-            <div class='formcontrols'>
-                <input type="submit" value="Войти" class="leftfloat">
-                <div class="leftfloat leftpad1 controlinfo"></div>
-                <div class="rightfloat controlstatus"></div>
-                <br style="clear: both;">
-            </div>
-
-        </form>
-
-        <p style="font-size: 16px;margin-top:10px ">
-            <a class="simplebutton" href='/member/forgot'>Забыли пароль? &mdash; мы вышлем на email новый</a>
-        </p>
-
-            </div>
-</div>-->
-
-
-    <div class="FW log" id="log">
-        <div class="reg-head">
-            <div>
-                <div class="reg-head-div">
-                    <h1>Вход</h1>
+    <div class="news">
+        <div class="white-block-wrapper">
+            <div class="container firstBlock">
+                <div class="BLK CW">
+                    <h2>Новости</h2>
                 </div>
-                <div class="reg-head-butt" id="log-butt"> x </div>
-                <br style="clear: both">
-            </div>
-
-            <form action="/member/login" method="post" id="member-login" class="gcform">
-
-                <label for="email">E-mail</label><input type="text" name="email" class="forminput" value="">
-                <br>
-                <label for="password">Пароль</label><input type="password" name="password" class="forminput" value="">
-                <input type="hidden" name="path" class="forminput" value="/">
-
-                <div class="formcontrols">
-                    <input type="submit" value="Войти" class="leftfloat">
-                    <div class="leftfloat leftpad1 controlinfo"></div>
-                    <div class="rightfloat controlstatus"></div>
-                    <br style="clear: both;">
-                </div>
-
-            </form>
-
-            <p style="font-size: 16px;margin-top:10px ">
-                <a class="simplebutton" href="/member/forgot">Забыли пароль? &mdash; мы вышлем на email новый</a>
-            </p>
-
-            <?php
-        if ($standartFormRegisterEnabled == true)
-        {
-            ?>
-                <p class="TM2"><a class="simplebutton" href="/member/register">Регистрация (требуется E-mail)</a></p>
-                <?php
-        }
-        if ($oauthEnabled == true)
-        {
-            ?>
-                    <p class="TM1"><a class="simplebutton" href="/oauth/loginwith">Простая и быстрая регистрация через социальные сети</a></p>
-                    <?php
-        }
-        ?>
-        </div>
-    </div>
-
-    <div class="FW reg" id="reg">
-        <div class="reg-head">
-            <div>
-                <div class="reg-head-div">
-                    <h1>Регистрация</h1>
-                </div>
-                <div class="reg-head-butt" id="reg-butt"> x </div>
-                <br style="clear: both">
-            </div>
-
-            <form action="/member/register" method="post" id="member-register" class="gcform">
-
-                <label for="email"><b>Ваше имя</b></label> <input type="text" name="name" class="forminput" value=""><br>
-                <label for="email"><b>Ваш e-mail</b></label> <input type="text" name="email" class="forminput" value=""><br>
-                <label for="email"><b>Пароль</b></label> <input type="password" name="providedpassword" class="forminput" value=""><br>
-                <label for="email"><b>Пароль (повторите)</b></label> <input type="password" name="providedpasswordcopy" class="forminput" value=""><br>
-                <input type="hidden" name="path" class="forminput" value="/"><br>
-
-                <br>
-
-
-                <div class="formcontrols">
-                    <input type="submit" value="Регистрация" class="leftfloat">
-                    <div class="leftfloat leftpad1 controlinfo"></div>
-                    <div class="rightfloat controlstatus"></div>
-                    <br style="clear: both;">
-                </div>
-
-            </form>
-        </div>
-    </div>
-
-    <div class="FW" style="position: fixed; z-index: 1001; top: 59px;">
-
-        <div id="smenu" class="CW">
-            <div id="smenui" class="BLK">
-                <div class="left" style="text-align: right;">
-                    <a class="animatedFast" href="#">«Металлист» не пробился в Лигу чемпионов</a>
-                </div>
-                <div class="right">
-                    <a class="animatedFast" href="#">МИД настроен урегулировать ситуацию с таможней РФ</a>
+                <div class="news__main">
+                    <ul class="news__main-list">
+                        <li>
+                            <div class="news__main-text-block">
+                                <h3 class="news__main-item-header">Госфининспекция проверит 300 «дорожных» тендеров</h3>
+                                <p class="news__main-item-text">Государственная финансовая инспекция Украины намерена до конца года проверить законность проведения порядка 300 торгов в сфере дорожного строительства, образования и в других отраслях, аккумулирующих значительные суммы
+                                    бюджетных средств.
+                                </p>
+                                <a href="#" class="absolute-link"></a>
+                                <span class="news__main-item-date">24 сентября 16:16</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="news__main-text-block">
+                                <h3 class="news__main-item-header">Госфининспекция проверит 300 «дорожных» тендеров</h3>
+                                <p class="news__main-item-text">Государственная финансовая инспекция Украины намерена до конца года проверить законность проведения порядка 300 торгов в сфере дорожного строительства.</p>
+                                <a href="#" class="absolute-link"></a>
+                                <span class="news__main-item-date">24 сентября 16:16</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="news__main-text-block">
+                                <h3 class="news__main-item-header">Госфининспекция проверит 300 «дорожных» тендеров</h3>
+                                <p class="news__main-item-text">Государственная финансовая инспекция Украины намерена до конца года проверить законность проведения порядка 300 торгов в сфере дорожного строительства, образования и в других отраслях, аккумулирующих значительные суммы
+                                    бюджетных средств.
+                                </p>
+                                <a href="#" class="absolute-link"></a>
+                                <span class="news__main-item-date">24 сентября 16:16</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
-
-
-
-    <div id="readscreen" class="firstBlockRead">
-
-        <div id="headercontainer" class="BLK CW TAL TM2">
-            <h2>Один такой на свете</h2>
-            <span class="news-under-header-info">Алина Авдеева, кориспондент Pravda.ua, 4 февраля 2017, 12:10</span>
-        </div>
-
-        <div class="textcontainer BLK CW">
-
-            <div id="anonscontainer" class="TM2 BLK 0BG">
-                <div class="anons FL" style="width: 600px; padding-left: 45px; padding-right: 100px; background-color: #fafafa">
-                    <p>
-                        <p>Я, наверное, один такой на свете. Я работал с Билли Холидей, Луи Армстронгом, Эллой Фитцджеральд, Дюком Эллингтоном, Диззи Гиллеспи, Рэем Чарльзом, Аретой Франклин, Майклом Джексоном и рэперами. Fly Me to the Moon Базз Олдрин пел
-                            на Луне. А потом еще был Синатра, Пол Саймон, Тони Беннетт. Короче, я такой один.</p>
-                    </p>
-                </div>
-                <div class="FL" style="width: 245px; height: 130px; vertical-align: middle">
-                    <table width="100%" height="100%">
-                        <tr>
-                            <td style="position: fixed;" valign="middle">
-                                <a href="#" class="social-web-link"><img src="img/facebook-icon.svg" style="display: inline-block;"><span class="social-web-follows">2</span></a>
-                                <a href="#" class="social-web-link"> <img src="img/twitter-icon.svg" style="display: inline-block;"><span class="social-web-follows">0</span></a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <div class="text TM2">
-
-
-
-
-
-                <!--
-
-            -->
-                <p><strong>В детстве я был простой уличной крысой,</strong> шныряющей по чикагским задворкам времен Депрессии.</p>
-                <blockquote>
-                    <p><strong>Моя бабушка</strong> — Сьюзан Джонс — была из освобожденных рабов, и иногда отец брал меня к ней в Луисвилль. Она жила в домишке, который можно было перешибить плевком, и у нее не было электричества. Только колодец во дворе,
-                        небольшая угольная печка и куча керосиновых ламп.</p>
-                    <p><strong>Помню, что как-то раз, в детстве,</strong> мы с братом украли ящик меда, убежали с ним в лес и за один присест расправились со всем содержимым. После этого я не притрагивался к меду лет двадцать. Просто потрясающе, сколько
-                        неприятностей можно найти на свою задницу, если тебе больше нечем заняться.</p>
-                </blockquote>
-                <p></p>
-                <p><strong><img src="/mediaimg/865/2076865222/-KRUGER-V-PRABAL-GURUNG.jpg" alt="76521484" /></strong></p>
-                <p><strong>Как-то раз, читая лекцию,</strong> я имел неосторожность сказать, что в те времена, когда я был ребенком, нам было очень непросто подобраться к музыке, потому что MTV тогда еще не было. И тут вдруг кто-то говорит из зала: «Да ладно?»</p>
-                <p><img src="/mediaimg/68/1601921694/Dolce-Gabbana-SS-2014-Milan-Fashion-Week.jpg" alt="undefined" /></p>
-                <p></p>
-                <p><img src="/mediaimg/270/1858538603/Screen-shot-2013-09-25-at-10512-AM.png" alt="undefined" /></p>
-                <p><strong>Я не заслужил</strong> того, чтобы меня ввели в Зал славы композиторов и дали премию. Но много лет назад я перенес операцию на мозге, и этого я тоже не заслужил, так что премию я все же решил оставить себе.</p>
-                <p><strong>Тому, кто научился хорошо зарабатывать,</strong> нужно научиться правильно тратить. Но это посложнее будет.</p>
-                <p><strong>Когда ты начинаешь менять музыку на деньги</strong>, Господь покидает комнату.</p>
-                <p><strong>Как-то раз Боно и я</strong> были с двадцатипятиминутным визитом у папы — обсуждали списание долгов странам третьего мира. После этого газеты принялись болтать о том, что мы выпросили по несколько миллиардов для Мозамбика, Боливии
-                    и Кот-д’Ивуара. А мы — два музыканта-попрошайки, ирландский рокер и чувак из Чикаго, — мы просто были счастливы. Как лиса, обожравшаяся кислой капусты.</p>
-                <p><strong>Только представьте себе,</strong> как гармоничен стал бы наш мир, если бы каждый человек — молодой или старый — поделился бы с остальными тем, что получается у него лучше всего.</p>
-                <p><strong>Вы хотите знать, как выглядит мое сердце?</strong> Посмотрите на моих дочерей.</p>
-                <p><strong>Будущее представляется мне</strong> таким ярким, что слепит мне глаза.</p>
-                <p><strong>Сейчас я учу китайский и арабский.</strong> Приоткрой дверь навстречу им, и они приоткроют дверь навстречу тебе.</p>
-                <p><strong>Никто не скажет</strong> вам, как будет развиваться музыка. В какой-нибудь дыре сейчас наверняка сидит парень с гитарой или клавишами, и в тот момент, когда он, наконец, появится на сцене, все, кто хоть что-то предполагал, окажутся
-                    неправы.
-                </p>
-                <p><strong>Продюсер — это отчасти сиделка,</strong> а отчасти психотерапевт. Вы и представить не можете, с кем нам приходится работать.</p>
-                <p><strong>Незадолго до смерти</strong> Фрэнк Синатра дал мне вот это кольцо, и с тех пор я никогда его не снимал. Представляете, если я поеду на Сицилию, мне не нужен будет паспорт. Я просто буду размахивать там этим кольцом, вот и все.</p>
-                <p><strong>Многие сомневаются,</strong> что именно я сделал «Триллер» Майкла Джексона. Что ж, быть недооцененным — великая сила.</p>
-                <p><strong>Марлон Брандо был гением нанотехнологий. </strong>Его нанотехнологии были в миллиарды раз быстрее, чем все современные компьютеры. Вот каким я запомнил Марлона.</p>
-                <p><strong>У меня никогда</strong> не было домашней студии. Студия для меня — это что-то священное, чего нельзя иметь дома. Я всегда говорил своим: «Не толпитесь в студии. Если Господу захочется войти, он всегда должен найти для себя место».</p>
-                <p><strong>Уважай и люби свои ошибки </strong>— это научит тебя не совершать новых.</p>
-                <p><strong>Под дождем все рано или поздно становятся мокрыми.</strong></p>
-
-                <p style="text-transform: uppercase; color: #0774D1; font-weight: bold;">Комментарии</p>
-                <hr size="1" color="dddddd">
-                <p>Оставлять комментарии могут только зарегистрированные пользователи.</p>
-                <p class="BM1">
-                    <span id="enterReg" style="cursor: pointer"> Регистрация </span>, <span id="enterLog" style="cursor: pointer"> Вход </span>
-                </p>
-
-
-
-            </div>
-        </div>
-
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div id="mainMnenia">
-
-        <div class="CW">
-            <ul class="news-block__list">
-                <li class="news-block__list-item">
-                    <img src="img/news-block-1.png" alt="" class="news-block__item-img">
-                    <div class="news-block__text-block">
-                        <h3 class="news-block__item-header">
-                            Стартапер, который чуть не убил Хусейна
-                        </h3>
-                        <span class="news-block__item-date">4 февраля 2017, 12:10</span>
+        <div class="white-block-wrapper">
+            <div class="container">
+                <div class="daily-news">
+                    <div class="daily-news__date-block">
+                        <!--Если дата совпадает с сегодняшней, то нужно добавить класс daily-news__current-date--today к span-->
+                        <a href=""><span class="daily-news__current-date">9 Июня 2017</span></a>
                     </div>
-                </li>
-                <li class="news-block__list-item">
-                    <img src="img/news-block-2.png" alt="" class="news-block__item-img">
-                    <div class="news-block__text-block">
-                        <h3 class="news-block__item-header">
-                            Зачем украинским молочникам иностранная прописка
-                        </h3>
-                        <span class="news-block__item-date">4 февраля 2017, 12:10</span>
+                    <ul class="daily-news__list">
+                        <li class="daily-news__item">
+                            <div class="daily-news__item-time">10:54</div>
+                            <div class="daily-news__item-text-block">
+                                <a href="#" class="absolute-link"></a>
+                                <p class="daily-news__item-header">Гриневич розповіла, як зміниться викладання історії у школах</p>
+                                <p class="daily-news__item-text">Курси "Історія України" та "Всесвітня історія" об'єднають в один предмет для учнів 10-11 класів, які матимуть профільне навчання.</p>
+                            </div>
+                        </li>
+                        <li class="daily-news__item">
+                            <div class="daily-news__item-time">10:54</div>
+                            <div class="daily-news__item-text-block">
+                                <a href="#" class="absolute-link"></a>
+                                <p class="daily-news__item-header daily-news__item-header--bold">У Білому домі підтвердили, що не зніматимуть санкції з РФ за Крим</p>
+                                <p class="daily-news__item-text">
+                                    Курси "Історія України" та "Всесвітня історія" об 'єднають в один предмет для учнів 10-11 класів, які матимуть профільне навчання.</p>
+                            </div>
+                        </li>
+                        <li class="daily-news__item">
+                            <div class="daily-news__item-time">10:54</div>
+                            <div class="daily-news__item-text-block">
+                                <a href="#" class="absolute-link"></a>
+                                <p class="daily-news__item-header">Суд продовжив арешт обвинуваченому в держзраді Без'язикову </p>
+                                <p class="daily-news__item-text">Печерський суд Києва продовжив арешт полковнику ЗСУ Івану Без'язикову, підозрюваному в державній зраді, до 8 квітня.</p>
+                            </div>
+                        </li>
+                        <li class="daily-news__item">
+                            <div class="daily-news__item-time">10:54</div>
+                            <div class="daily-news__item-text-block">
+                                <a href="#" class="absolute-link"></a>
+                                <p class="daily-news__item-header">Князєв про квартири колишньої дружини: це болюче для мене питання</p>
+                                <p class="daily-news__item-text">Новопризначений голова Національної поліції України Сергій Князєв прокоментував інформацію, опубліковану журналістами-розслідувачами про декілька квартир і елітних авто у власності у його колишньої дружини Вікторії Князєвої.</p>
+                            </div>
+                        </li>
+                        <li class="daily-news__item">
+                            <div class="daily-news__item-time">10:54</div>
+                            <div class="daily-news__item-text-block">
+                                <a href="#" class="absolute-link"></a>
+                                <p class="daily-news__item-header">Суд продовжив арешт обвинуваченому в держзраді Без'язикову </p>
+                                <p class="daily-news__item-text">Печерський суд Києва продовжив арешт полковнику ЗСУ Івану Без'язикову, підозрюваному в державній зраді, до 8 квітня.</p>
+                            </div>
+                        </li>
+                        <li class="daily-news__item">
+                            <div class="daily-news__item-time">10:54</div>
+                            <div class="daily-news__item-text-block">
+                                <a href="#" class="absolute-link"></a>
+                                <p class="daily-news__item-header">Князєв про квартири колишньої дружини: це болюче для мене питання</p>
+                                <p class="daily-news__item-text">Новопризначений голова Національної поліції України Сергій Князєв прокоментував інформацію, опубліковану журналістами-розслідувачами про декілька квартир і елітних авто у власності у його колишньої дружини Вікторії Князєвої.</p>
+                            </div>
+                        </li>
+                        <li class="daily-news__item">
+                            <div class="daily-news__item-time">10:54</div>
+                            <div class="daily-news__item-text-block">
+                                <a href="#" class="absolute-link"></a>
+                                <p class="daily-news__item-header">Гриневич розповіла, як зміниться викладання історії у школах </p>
+                                <p class="daily-news__item-text">Курси "Історія України" та "Всесвітня історія" об'єднають в один предмет для учнів 10-11 класів, які матимуть профільне навчання.</p>
+                            </div>
+                        </li>
+                        <li class="daily-news__item">
+                            <div class="daily-news__item-time">10:54</div>
+                            <div class="daily-news__item-text-block">
+                                <a href="#" class="absolute-link"></a>
+                                <p class="daily-news__item-header daily-news__item-header--bold">Порошенко нагородив бійців ЗСУ і співробітників ДСНС за Авдіївку</p>
+                                <p class="daily-news__item-text">Курси "Історія України" та "Всесвітня історія" об'єднають в один предмет для учнів 10-11 класів, які матимуть профільне навчання.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="daily-news__date-block">
+                        <a href=""><span class="daily-news__prev-date">8 Июня 2017</span></a>
+                        <a href=""><span class="daily-news__next-date">10 Июня 2017</span></a>
                     </div>
-                </li>
-                <li class="news-block__list-item">
-                    <img src="img/news-block-3.png" alt="" class="news-block__item-img">
-                    <div class="news-block__text-block">
-                        <h3 class="news-block__item-header">
-                            Зачем украинским молочникам иностранная прописка
-                        </h3>
-                        <span class="news-block__item-date">4 февраля 2017, 12:10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="journal">
+        <div class="container">
+            <h2 class="journal__header">Журнал “Народный депутат”</h2>
+            <div class="journal__item">
+
+                <img src="img/journal-img.png" alt="" class="journal__img">
+                <div class="journal__news-block">
+                    <h3 class="journal__news-month">ФЕВРАЛЬ</h3>
+                    <div class="journal__news-item">
+                        <a href="#" class="absolute-link"></a>
+                        <p class="journal__news-item-author">Юрій Павленко: </p>
+                        <p class="journal__news-item-text">«З безправного не виросте вільний»</p>
                     </div>
-                </li>
+                    <div class="journal__news-item">
+                        <a href="#" class="absolute-link"></a>
+                        <p class="journal__news-item-author">Олег Царев:</p>
+                        <p class="journal__news-item-text">«В украине носителем власти пока еще является народ, а не еврочиновники»</p>
+                    </div>
+                    <div class="journal__news-item">
+                        <a href="#" class="absolute-link"></a>
+                        <p class="journal__news-item-author">Александр Лукашенко: </p>
+                        <p class="journal__news-item-text">«Обновление страны — путь к успеху и процветанию»</p>
+                    </div>
+                    <a href="#" class="journal__all-news-link all-news-link">Все стытьи</a>
+                </div>
+
+            </div>
+            <div class="journal__item">
+
+                <img src="img/journal-img-2.png" alt="" class="journal__img">
+                <div class="journal__news-block">
+                    <h3 class="journal__news-month">ФЕВРАЛЬ</h3>
+                    <div class="journal__news-item">
+                        <a href="#" class="absolute-link"></a>
+                        <p class="journal__news-item-author">Юрій Павленко: </p>
+                        <p class="journal__news-item-text">«З безправного не виросте вільний»</p>
+                    </div>
+                    <div class="journal__news-item">
+                        <a href="#" class="absolute-link"></a>
+                        <p class="journal__news-item-author">Олег Царев:</p>
+                        <p class="journal__news-item-text">«В украине носителем власти пока еще является народ, а не еврочиновники»</p>
+                    </div>
+                    <div class="journal__news-item">
+                        <a href="#" class="absolute-link"></a>
+                        <p class="journal__news-item-author">Александр Лукашенко: </p>
+                        <p class="journal__news-item-text">«Обновление страны — путь к успеху и процветанию»</p>
+                    </div>
+                    <a href="#" class="journal__all-news-link all-news-link">Все стытьи</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer__list">
+                <li class="footer__list-item"><a href="#">АКТУАЛЬНО</a></li>
+                <li class="footer__list-item"><a href="#">ВНУТРІШНЯ ПОЛІТИКА</a></li>
+                <li class="footer__list-item"><a href="#">РЕГІОНАЛЬНА ПОЛІТИКА</a></li>
+                <li class="footer__list-item"><a href="#">ЕКОНОМІЧНА ПОЛІТИКА</a></li>
+                <li class="footer__list-item"><a href="#">ЗОВНІШНЯ ПОЛІТИКА</a></li>
+                <li class="footer__list-item"><a href="#">ПАРЛАМЕНТСЬКИЙ КЛУБ</a></li>
+                <li class="footer__list-item"><a href="#">ГРОМАДСЬКІ ДИСКУСІЇ</a></li>
+                <li class="footer__list-item"><a href="#">ВИСОКИЙ СТИЛЬ</a></li>
+                <li class="footer__list-item"><a href="#">ШКОЛА СОМЕЛЬЕ</a></li>
+                <li class="footer__list-item"><a href="#">КУЛЬТУРНИЙ КОД</a></li>
+                <li class="footer__list-item"><a href="#">ЗДОРОВ’Я &amp; КРАСА</a></li>
+                <li class="footer__list-item"><a href="#">ГЛОБАЛЬНI ПРОЦЕСИ</a></li>
+                <li class="footer__list-item"><a href="#">СТОРІНКИ ІСТОРІЇ</a></li>
+                <li class="footer__list-item"><a href="#">ЮРИДИЧНА КОНСУЛЬТАЦIЯ</a></li>
             </ul>
+            <div class="copyright">2017&copy; copyright</div>
         </div>
-
-    </div>
-
+    </footer>
 </body>
 
 </html>
