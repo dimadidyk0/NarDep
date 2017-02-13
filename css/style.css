@@ -548,10 +548,12 @@ body {
     color: #EB3525;
     padding: 52px 0 12px 0;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .journal {
     background-color: #fff;
+    font-size: 0;
 }
 
 .journal__img {
@@ -563,6 +565,7 @@ body {
 .journal__news-month {
     font: 11px/13px fira_sanslight;
     color: #B1B1B1;
+    text-transform: uppercase;
     padding: 27px 0 5px 0;
 }
 
@@ -630,10 +633,18 @@ body {
     padding: 18px 0 21px;
 }
 
-.hournal__item {
+.journal__item {
     width: 100%;
     display: block;
     font-size: 0;
+}
+
+.journal__item {
+    display: none;
+}
+
+.journal__item:first-of-type {
+    display: block;
 }
 
 @media (min-width:990px) {
@@ -678,5 +689,46 @@ body {
         display: inline-block;
         width: 240px;
         vertical-align: top;
+        padding: 4px 0 0 15px;
+    }
+    .journal__header {
+        font: 46px/55px fira_sansregular;
+        color: #EB3525;
+        padding: 113px 0 53px 0;
+        margin: 0;
+        text-transform: inherit;
+        text-align: left;
+    }
+    .journal__news-month {
+        font: 12px/15px fira_sanslight;
+        padding: 0 0 4px 0;
+        margin: 0;
+    }
+    .journal__news-item-author {
+        font: 16px/18px fira_sansregular;
+        padding: 16px 0 5px;
+    }
+    .journal__news-item-text {
+        font-size: 14px;
+        line-height: 16px;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    .journal__all-news-link.all-news-link {
+        padding: 24px 0 0 0;
+        text-transform: uppercase;
+        font-family: fira_sansregular;
+    }
+    .journal__item {
+        display: inline-block;
+        width: 50%;
+    }
+    .journal__item:first-of-type {
+        margin-left: -41px;
+        padding-right: 41px;
+        display: inline-block;
+    }
+    .journal {
+        padding-bottom: 120px;
     }
 }
