@@ -647,7 +647,7 @@ body {
     display: block;
 }
 
-@media (min-width:990px) {
+@media (min-width:1280px) {
     .container {
         width: 990px;
         margin: 0 auto;
@@ -730,5 +730,8 @@ body {
     }
     .journal {
         padding-bottom: 120px;
+    }
+    #topmenu li a {
+        font: 12px/54px fira_sansmedium;
     }
 }
