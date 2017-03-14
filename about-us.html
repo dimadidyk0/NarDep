@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>О нас</title>
 
@@ -11,10 +11,10 @@
     <script>
         (function(doc) {
             var viewport = document.getElementById('viewport');
-            if (navigator.userAgent.match(/iPad/i || window.screen.width >= 768)) {
+            if ((window.screen.width > 768) || navigator.userAgent.match(/iPad/i)) {
                 viewport.setAttribute("content", "width=1280");
             } else {
-                viewport.setAttribute("content", "width=device-width", "initial-scale=1.0", "user-scalable=no");
+                viewport.setAttribute("content", "width=device-width, initial-scale=1.0, user-scalable=no");
             }
         }(document));
     </script>
@@ -51,7 +51,7 @@
         </div>
 
     </div>
-    <div class="sidebar-logo desctop-block">
+    <div class="sidebar-logo desktop-block">
         <div alt="" class="sidebar-logo-img"></div>
     </div>
 
