@@ -7,7 +7,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: inherit;
 }
 
 #relc {
@@ -27,7 +27,7 @@ a {
     font-size: 72px;
     top: 10px;
     left: -135px;
-    background: transparent url(../img/header-logo.png) 50% 50% no-repeat;
+    background: transparent url(nd_.png) 50% 50% no-repeat;
     background-size: cover;
 }
 
@@ -77,9 +77,10 @@ a {
 }
 
 #topmenu li a {
+    font-weight: bold;
     display: block;
     text-decoration: none;
-    font-size: 11px;
+    font-size: 12px;
     /*font-weight: bold;*/
     text-transform: uppercase;
     color: #000;
@@ -154,7 +155,7 @@ h2 {
 }
 
 #mainPersony {
-    background: #f9f9f9 url('../img/mintvline.png') 50% 50% repeat-y;
+    background: #f9f9f9 url('/img/mintvline.png') 50% 50% repeat-y;
 }
 
 #mainPersony h2 {
@@ -170,13 +171,13 @@ h2 {
     text-align: center;
     color: #ddd;
     font-size: 36px;
-    background: transparent url('../img/mintvline.png') 50% 50% repeat-y;
+    background: transparent url('/img/mintvline.png') 50% 50% repeat-y;
     line-height: 100px;
     font-family: 'Sinhala Sangam MN', 'Georgia', sans-serif;
 }
 
 #whoisname a:hover {
-    background: #fff url('../img/mintvline.png') 50% 50% repeat-y;
+    background: #fff url('/img/mintvline.png') 50% 50% repeat-y;
     color: #555;
     /*#d1fbf4*/
 }
@@ -271,7 +272,7 @@ h2 {
     bottom: 0;
     width: 100px;
     height: 60px;
-    background: transparent url('../img/star1.png') 0 2px no-repeat;
+    background: transparent url('/img/star1.png') 0 2px no-repeat;
 }
 
 .feeditemiconsblock .i2 {
@@ -279,7 +280,7 @@ h2 {
     bottom: 0;
     width: 100px;
     height: 60px;
-    background: transparent url('../img/eye1.png?2') 0 10px no-repeat;
+    background: transparent url('/img/eye1.png?2') 0 10px no-repeat;
 }
 
 .feeditemiconsblock .i3 {
@@ -287,7 +288,7 @@ h2 {
     bottom: 0;
     width: 100px;
     height: 60px;
-    background: transparent url('../img/cloud1.png') 0 0 no-repeat;
+    background: transparent url('/img/cloud1.png') 0 0 no-repeat;
 }
 
 .iconCounter2 {
@@ -391,7 +392,7 @@ h2 {
     display: inline-block;
     width: 235px;
     height: 142px;
-    background: #555 url('../img/noise.gif') 50% 50% repeat;
+    background: #555 url('/img/noise.gif') 50% 50% repeat;
 }
 
 .videoBlockRight .videoframe {
@@ -435,14 +436,14 @@ h2 {
 
 .videoBlockLeft .videodesc .videoviews {
     text-align: right;
-    background: transparent url('../img/videoeye.png?1') 100% 50% no-repeat;
+    background: transparent url('/img/videoeye.png?1') 100% 50% no-repeat;
     padding-right: 39px;
     right: 0px;
 }
 
 .videoBlockRight .videodesc .videoviews {
     text-align: left;
-    background: transparent url('../img/videoeye.png?1') 0 50% no-repeat;
+    background: transparent url('/img/videoeye.png?1') 0 50% no-repeat;
     padding-left: 36px;
     left: 0px;
 }
@@ -673,20 +674,20 @@ table td.tval {
 }
 
 #smenui>div.left a {
-    background: transparent url('../img/arrow-left.png') -20% 50% no-repeat;
+    background: transparent url('/img/arrow-left.png') -20% 50% no-repeat;
 }
 
 #smenui>div.right a {
-    background: transparent url('../img/arrow-right.png') 120% 50% no-repeat;
+    background: transparent url('/img/arrow-right.png') 120% 50% no-repeat;
 }
 
 #smenui>div.left a:hover {
-    background: transparent url('../img/arrow-left.png') 0% 50% no-repeat;
+    background: transparent url('/img/arrow-left.png') 0% 50% no-repeat;
     color: #0b1483;
 }
 
 #smenui>div.right a:hover {
-    background: transparent url('../img/arrow-right.png') 100% 50% no-repeat;
+    background: transparent url('/img/arrow-right.png') 100% 50% no-repeat;
     color: #0b1483;
 }
 
@@ -695,7 +696,7 @@ table td.tval {
 }
 
 #readscreen {
-    background: #fafafa;
+    background: #fff;
 }
 
 
@@ -763,7 +764,7 @@ table td.tval {
     font-size: 72px;
     line-height: 72px;
     margin-bottom: 10px;
-    color: #EB3525;
+    color: #db2e2e;
 }
 
 .digit>p {
@@ -773,14 +774,15 @@ table td.tval {
 }
 
 blockquote {
-    /* background: #fff; */
+    /*background: #fff;*/
     background: #dcfef9;
     color: #333;
-    width: 485px;
-    font-size: 18px;
+    width: 700px;
+    font-size: 20px;
     line-height: 150%;
-    padding: 2.5em;
-    margin: 0;
+    padding: 2em 2.5em;
+    margin: 1em 0;
+    margin-left: -100px;
     position: relative;
 }
 

@@ -8,9 +8,17 @@
     <title>Новости</title>
 
 
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta id="viewport" name='viewport'>
+    <script>
+        (function(doc) {
+            var viewport = document.getElementById('viewport');
+            if (navigator.userAgent.match(/iPad/i || window.screen.width >= 768)) {
+                viewport.setAttribute("content", "width=1280");
+            } else {
+                viewport.setAttribute("content", "width=device-width", "initial-scale=1.0", "user-scalable=no");
+            }
+        }(document));
+    </script>
     <!--
     <script type="text/javascript" src="/goldcut/js/gcdom.js"></script>
     <script type="text/javascript" src="/js/site.js"></script>-->
@@ -36,153 +44,158 @@
 </head>
 
 <body>
-    <div class="FW WBG fixed-block">
+    <div class="main-page">
+        <div class="FW WBG fixed-block">
 
-        <div class="CW TAL" id="relc">
-            <ul id="topmenu">
-                <li><a href="#">НОВОСТИ</a></li>
-                <li><a href="/feed/category/Lichnosti">ЛИЧНОСТИ</a></li>
-                <li><a href="/feed/category/Rynki">РЫНКИ</a></li>
-                <li><a href="/feed/category/Ekonomika">ЭКОНОМИКА</a></li>
-                <li><a href="#">ПРАКТИКА</a></li>
-                <li><a href="/feed/category/Goroda">ГОРОДА</a></li>
-                <li><a href="/feed/category/Mneniya">МНЕНИЯ</a></li>
-                <li><a href="/feed/category/Infografika">ИНФОГРАФИКА</a></li>
-                <li><a href="/feed/video">ВИДЕО</a></li>
-                <li><a href="#">РЕЦЕНЗИИ</a></li>
-                <li><a href="#">ПРЕЗЕНТАЦИИ</a></li>
-            </ul>
-            <a href="/">
-                <div id="logo"></div>
-            </a>
-        </div>
-
-    </div>
-    <div class="sidebar-logo desctop-block">
-        <img src="img/nd-sidebar-logo.png" alt="" class="sidebar-logo-img">
-    </div>
-    <div class="news">
-        <div class="white-block-wrapper">
-            <div class="container firstBlock">
-                <div class="BLK CW">
-                    <h2>Новости</h2>
-                </div>
-                <div class="news__main">
-                    <ul class="news__main-list">
-                        <li>
-                            <div class="news__main-text-block">
-                                <h3 class="news__main-item-header">Госфининспекция проверит 300 «дорожных» тендеров</h3>
-                                <p class="news__main-item-text">Государственная финансовая инспекция Украины намерена до конца года проверить законность проведения порядка 300 торгов в сфере дорожного строительства, образования и в других отраслях, аккумулирующих значительные суммы
-                                    бюджетных средств.
-                                </p>
-                                <a href="#" class="absolute-link"></a>
-                                <span class="news__main-item-date">24 сентября 16:16</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="news__main-text-block">
-                                <h3 class="news__main-item-header">Госфининспекция проверит 300 «дорожных» тендеров</h3>
-                                <p class="news__main-item-text">Государственная финансовая инспекция Украины намерена до конца года проверить законность проведения порядка 300 торгов в сфере дорожного строительства.</p>
-                                <a href="#" class="absolute-link"></a>
-                                <span class="news__main-item-date">24 сентября 16:16</span>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="news__main-text-block">
-                                <h3 class="news__main-item-header">Госфининспекция проверит 300 «дорожных» тендеров</h3>
-                                <p class="news__main-item-text">Государственная финансовая инспекция Украины намерена до конца года проверить законность проведения порядка 300 торгов в сфере дорожного строительства, образования и в других отраслях, аккумулирующих значительные суммы
-                                    бюджетных средств.
-                                </p>
-                                <a href="#" class="absolute-link"></a>
-                                <span class="news__main-item-date">24 сентября 16:16</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+            <div class="CW TAL" id="relc">
+                <ul id="topmenu">
+                    <li><a href="#">НОВОСТИ</a></li>
+                    <li><a href="/feed/category/Lichnosti">ЛИЧНОСТИ</a></li>
+                    <li><a href="/feed/category/Rynki">РЫНКИ</a></li>
+                    <li><a href="/feed/category/Ekonomika">ЭКОНОМИКА</a></li>
+                    <li><a href="#">ПРАКТИКА</a></li>
+                    <li><a href="/feed/category/Goroda">ГОРОДА</a></li>
+                    <li><a href="/feed/category/Mneniya">МНЕНИЯ</a></li>
+                    <li><a href="/feed/category/Infografika">ИНФОГРАФИКА</a></li>
+                    <li><a href="/feed/video">ВИДЕО</a></li>
+                    <li><a href="#">РЕЦЕНЗИИ</a></li>
+                    <li><a href="#">ПРЕЗЕНТАЦИИ</a></li>
+                </ul>
+                <a href="/">
+                    <div id="logo"></div>
+                </a>
             </div>
+
         </div>
-        <div class="white-block-wrapper">
-            <div class="container">
-                <div class="daily-news">
-                    <div class="daily-news__date-block">
-                        <!--Если дата совпадает с сегодняшней, то нужно добавить класс daily-news__current-date--today к span-->
-                        <a href=""><span class="daily-news__current-date">9 Июня 2017</span></a>
+        <div class="sidebar-logo desctop-block">
+            <div alt="" class="sidebar-logo-img"></div>
+        </div>
+        <div class="news">
+            <div class="white-block-wrapper">
+                <div class="container firstBlock">
+                    <div class="BLK CW">
+                        <h2>Новости</h2>
                     </div>
-                    <ul class="daily-news__list">
-                        <li class="daily-news__item">
-                            <div class="daily-news__item-time">10:54</div>
-                            <div class="daily-news__item-text-block">
-                                <a href="#" class="absolute-link"></a>
-                                <p class="daily-news__item-header">Гриневич розповіла, як зміниться викладання історії у школах</p>
-                                <p class="daily-news__item-text">Курси "Історія України" та "Всесвітня історія" об'єднають в один предмет для учнів 10-11 класів, які матимуть профільне навчання.</p>
-                            </div>
-                        </li>
-                        <li class="daily-news__item">
-                            <div class="daily-news__item-time">10:54</div>
-                            <div class="daily-news__item-text-block">
-                                <a href="#" class="absolute-link"></a>
-                                <p class="daily-news__item-header daily-news__item-header--bold">У Білому домі підтвердили, що не зніматимуть санкції з РФ за Крим</p>
-                                <p class="daily-news__item-text">
-                                    Курси "Історія України" та "Всесвітня історія" об 'єднають в один предмет для учнів 10-11 класів, які матимуть профільне навчання.</p>
-                            </div>
-                        </li>
-                        <li class="daily-news__item">
-                            <div class="daily-news__item-time">10:54</div>
-                            <div class="daily-news__item-text-block">
-                                <a href="#" class="absolute-link"></a>
-                                <p class="daily-news__item-header">Суд продовжив арешт обвинуваченому в держзраді Без'язикову </p>
-                                <p class="daily-news__item-text">Печерський суд Києва продовжив арешт полковнику ЗСУ Івану Без'язикову, підозрюваному в державній зраді, до 8 квітня.</p>
-                            </div>
-                        </li>
-                        <li class="daily-news__item">
-                            <div class="daily-news__item-time">10:54</div>
-                            <div class="daily-news__item-text-block">
-                                <a href="#" class="absolute-link"></a>
-                                <p class="daily-news__item-header">Князєв про квартири колишньої дружини: це болюче для мене питання</p>
-                                <p class="daily-news__item-text">Новопризначений голова Національної поліції України Сергій Князєв прокоментував інформацію, опубліковану журналістами-розслідувачами про декілька квартир і елітних авто у власності у його колишньої дружини Вікторії Князєвої.</p>
-                            </div>
-                        </li>
-                        <li class="daily-news__item">
-                            <div class="daily-news__item-time">10:54</div>
-                            <div class="daily-news__item-text-block">
-                                <a href="#" class="absolute-link"></a>
-                                <p class="daily-news__item-header">Суд продовжив арешт обвинуваченому в держзраді Без'язикову </p>
-                                <p class="daily-news__item-text">Печерський суд Києва продовжив арешт полковнику ЗСУ Івану Без'язикову, підозрюваному в державній зраді, до 8 квітня.</p>
-                            </div>
-                        </li>
-                        <li class="daily-news__item">
-                            <div class="daily-news__item-time">10:54</div>
-                            <div class="daily-news__item-text-block">
-                                <a href="#" class="absolute-link"></a>
-                                <p class="daily-news__item-header">Князєв про квартири колишньої дружини: це болюче для мене питання</p>
-                                <p class="daily-news__item-text">Новопризначений голова Національної поліції України Сергій Князєв прокоментував інформацію, опубліковану журналістами-розслідувачами про декілька квартир і елітних авто у власності у його колишньої дружини Вікторії Князєвої.</p>
-                            </div>
-                        </li>
-                        <li class="daily-news__item">
-                            <div class="daily-news__item-time">10:54</div>
-                            <div class="daily-news__item-text-block">
-                                <a href="#" class="absolute-link"></a>
-                                <p class="daily-news__item-header">Гриневич розповіла, як зміниться викладання історії у школах </p>
-                                <p class="daily-news__item-text">Курси "Історія України" та "Всесвітня історія" об'єднають в один предмет для учнів 10-11 класів, які матимуть профільне навчання.</p>
-                            </div>
-                        </li>
-                        <li class="daily-news__item">
-                            <div class="daily-news__item-time">10:54</div>
-                            <div class="daily-news__item-text-block">
-                                <a href="#" class="absolute-link"></a>
-                                <p class="daily-news__item-header daily-news__item-header--bold">Порошенко нагородив бійців ЗСУ і співробітників ДСНС за Авдіївку</p>
-                                <p class="daily-news__item-text">Курси "Історія України" та "Всесвітня історія" об'єднають в один предмет для учнів 10-11 класів, які матимуть профільне навчання.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="daily-news__date-block">
-                        <a href=""><span class="daily-news__prev-date">8 Июня 2017</span></a>
-                        <a href=""><span class="daily-news__next-date">10 Июня 2017</span></a>
+                    <div class="news__main">
+                        <ul class="news__main-list">
+                            <li>
+                                <div class="news__main-text-block">
+                                    <h3 class="news__main-item-header">Госфининспекция проверит 300 «дорожных» тендеров</h3>
+                                    <p class="news__main-item-text">Государственная финансовая инспекция Украины намерена до конца года проверить законность проведения порядка 300 торгов в сфере дорожного строительства, образования и в других отраслях, аккумулирующих значительные суммы
+                                        бюджетных средств.
+                                    </p>
+                                    <a href="#" class="absolute-link"></a>
+                                    <span class="news__main-item-date">24 сентября 16:16</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="news__main-text-block">
+                                    <h3 class="news__main-item-header">Госфининспекция проверит 300 «дорожных» тендеров</h3>
+                                    <p class="news__main-item-text">Государственная финансовая инспекция Украины намерена до конца года проверить законность проведения порядка 300 торгов в сфере дорожного строительства.</p>
+                                    <a href="#" class="absolute-link"></a>
+                                    <span class="news__main-item-date">24 сентября 16:16</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="news__main-text-block">
+                                    <h3 class="news__main-item-header">Госфининспекция проверит 300 «дорожных» тендеров</h3>
+                                    <p class="news__main-item-text">Государственная финансовая инспекция Украины намерена до конца года проверить законность проведения порядка 300 торгов в сфере дорожного строительства, образования и в других отраслях, аккумулирующих значительные суммы
+                                        бюджетных средств.
+                                    </p>
+                                    <a href="#" class="absolute-link"></a>
+                                    <span class="news__main-item-date">24 сентября 16:16</span>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <div class="white-block-wrapper">
+                <div class="container">
+                    <div class="daily-news">
+                        <div class="daily-news__date-block">
+                            <!--Если дата совпадает с сегодняшней, то нужно добавить класс daily-news__current-date--today к span-->
+                            <a href=""><span class="daily-news__current-date">9 Июня 2017</span></a>
+                        </div>
+                        <ul class="daily-news__list">
+                            <li class="daily-news__item">
+                                <div class="daily-news__item-time">10:54</div>
+                                <div class="daily-news__item-text-block">
+                                    <a href="#" class="absolute-link"></a>
+                                    <p class="daily-news__item-header">Гриневич розповіла, як зміниться викладання історії у школах</p>
+                                    <p class="daily-news__item-text">Курси "Історія України" та "Всесвітня історія" об'єднають в один предмет для учнів 10-11 класів, які матимуть профільне навчання.</p>
+                                </div>
+                            </li>
+                            <li class="daily-news__item">
+                                <div class="daily-news__item-time">10:54</div>
+                                <div class="daily-news__item-text-block">
+                                    <a href="#" class="absolute-link"></a>
+                                    <p class="daily-news__item-header daily-news__item-header--bold">У Білому домі підтвердили, що не зніматимуть санкції з РФ за Крим</p>
+                                    <p class="daily-news__item-text">
+                                        Курси "Історія України" та "Всесвітня історія" об 'єднають в один предмет для учнів 10-11 класів, які матимуть профільне навчання.</p>
+                                </div>
+                            </li>
+                            <li class="daily-news__item">
+                                <div class="daily-news__item-time">10:54</div>
+                                <div class="daily-news__item-text-block">
+                                    <a href="#" class="absolute-link"></a>
+                                    <p class="daily-news__item-header">Суд продовжив арешт обвинуваченому в держзраді Без'язикову </p>
+                                    <p class="daily-news__item-text">Печерський суд Києва продовжив арешт полковнику ЗСУ Івану Без'язикову, підозрюваному в державній зраді, до 8 квітня.</p>
+                                </div>
+                            </li>
+                            <li class="daily-news__item">
+                                <div class="daily-news__item-time">10:54</div>
+                                <div class="daily-news__item-text-block">
+                                    <a href="#" class="absolute-link"></a>
+                                    <p class="daily-news__item-header">Князєв про квартири колишньої дружини: це болюче для мене питання</p>
+                                    <p class="daily-news__item-text">Новопризначений голова Національної поліції України Сергій Князєв прокоментував інформацію, опубліковану журналістами-розслідувачами про декілька квартир і елітних авто у власності у його колишньої дружини Вікторії
+                                        Князєвої.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="daily-news__item">
+                                <div class="daily-news__item-time">10:54</div>
+                                <div class="daily-news__item-text-block">
+                                    <a href="#" class="absolute-link"></a>
+                                    <p class="daily-news__item-header">Суд продовжив арешт обвинуваченому в держзраді Без'язикову </p>
+                                    <p class="daily-news__item-text">Печерський суд Києва продовжив арешт полковнику ЗСУ Івану Без'язикову, підозрюваному в державній зраді, до 8 квітня.</p>
+                                </div>
+                            </li>
+                            <li class="daily-news__item">
+                                <div class="daily-news__item-time">10:54</div>
+                                <div class="daily-news__item-text-block">
+                                    <a href="#" class="absolute-link"></a>
+                                    <p class="daily-news__item-header">Князєв про квартири колишньої дружини: це болюче для мене питання</p>
+                                    <p class="daily-news__item-text">Новопризначений голова Національної поліції України Сергій Князєв прокоментував інформацію, опубліковану журналістами-розслідувачами про декілька квартир і елітних авто у власності у його колишньої дружини Вікторії
+                                        Князєвої.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="daily-news__item">
+                                <div class="daily-news__item-time">10:54</div>
+                                <div class="daily-news__item-text-block">
+                                    <a href="#" class="absolute-link"></a>
+                                    <p class="daily-news__item-header">Гриневич розповіла, як зміниться викладання історії у школах </p>
+                                    <p class="daily-news__item-text">Курси "Історія України" та "Всесвітня історія" об'єднають в один предмет для учнів 10-11 класів, які матимуть профільне навчання.</p>
+                                </div>
+                            </li>
+                            <li class="daily-news__item">
+                                <div class="daily-news__item-time">10:54</div>
+                                <div class="daily-news__item-text-block">
+                                    <a href="#" class="absolute-link"></a>
+                                    <p class="daily-news__item-header daily-news__item-header--bold">Порошенко нагородив бійців ЗСУ і співробітників ДСНС за Авдіївку</p>
+                                    <p class="daily-news__item-text">Курси "Історія України" та "Всесвітня історія" об'єднають в один предмет для учнів 10-11 класів, які матимуть профільне навчання.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="daily-news__date-block">
+                            <a href=""><span class="daily-news__prev-date">8 Июня 2017</span></a>
+                            <a href=""><span class="daily-news__next-date">10 Июня 2017</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
     </div>
     <div class="journal">
         <div class="container">
@@ -237,6 +250,7 @@
             </div>
         </div>
     </div>
+
     <footer class="footer">
         <div class="container">
             <ul class="footer__list">
@@ -258,6 +272,7 @@
             <div class="copyright">2017&copy; copyright</div>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

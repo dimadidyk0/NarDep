@@ -6,8 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Один такой на свете / Выводы</title>
-
-    <meta name="viewport" content="width=1024" />
+    <meta id="viewport" name='viewport'>
+    <script>
+        (function(doc) {
+            var viewport = document.getElementById('viewport');
+            if (navigator.userAgent.match(/iPad/i || window.screen.width >= 768)) {
+                viewport.setAttribute("content", "width=1280");
+            } else {
+                viewport.setAttribute("content", "width=device-width", "initial-scale=1.0", "user-scalable=no");
+            }
+        }(document));
+    </script>
 
     <link rel='stylesheet' type='text/css' href='css/gcform.css' media='screen' />
     <link rel='stylesheet' type='text/css' href='css/gcgrid.css' media='screen' />
@@ -31,36 +40,39 @@
     <script type="text/javascript" src="/goldcut/js/stacktrace.js"></script>
     <script type="text/javascript" src="/goldcut/js/gcdom.js"></script>
     <script type="text/javascript" src="/js/site.js"></script>
-
 </head>
 
 <body>
-    <div class="mobile-block hamburger">
+    <div class="main-page">
+        <div class="mobile-block hamburger">
 
-    </div>
-    <div class="FW WBG fixed-block">
-
-        <div class="CW TAL" id="relc">
-            <ul id="topmenu">
-                <li><a href="#">НОВОСТИ</a></li>
-                <li><a href="/feed/category/Lichnosti">ЛИЧНОСТИ</a></li>
-                <li><a href="/feed/category/Rynki">РЫНКИ</a></li>
-                <li><a href="/feed/category/Ekonomika">ЭКОНОМИКА</a></li>
-                <li><a href="#">ПРАКТИКА</a></li>
-                <li><a href="/feed/category/Goroda">ГОРОДА</a></li>
-                <li><a href="/feed/category/Mneniya">МНЕНИЯ</a></li>
-                <li><a href="/feed/category/Infografika">ИНФОГРАФИКА</a></li>
-                <li><a href="/feed/video">ВИДЕО</a></li>
-                <li><a href="#">РЕЦЕНЗИИ</a></li>
-                <li><a href="#">ПРЕЗЕНТАЦИИ</a></li>
-            </ul>
-            <a href="/">
-                <div id="logo"></div>
-            </a>
         </div>
+        <div class="FW WBG fixed-block">
 
-    </div>
-    <!--<div class="FW reg" id="reg">
+            <div class="CW TAL" id="relc">
+                <ul id="topmenu">
+                    <li><a href="#">НОВОСТИ</a></li>
+                    <li><a href="/feed/category/Lichnosti">ЛИЧНОСТИ</a></li>
+                    <li><a href="/feed/category/Rynki">РЫНКИ</a></li>
+                    <li><a href="/feed/category/Ekonomika">ЭКОНОМИКА</a></li>
+                    <li><a href="#">ПРАКТИКА</a></li>
+                    <li><a href="/feed/category/Goroda">ГОРОДА</a></li>
+                    <li><a href="/feed/category/Mneniya">МНЕНИЯ</a></li>
+                    <li><a href="/feed/category/Infografika">ИНФОГРАФИКА</a></li>
+                    <li><a href="/feed/video">ВИДЕО</a></li>
+                    <li><a href="#">РЕЦЕНЗИИ</a></li>
+                    <li><a href="#">ПРЕЗЕНТАЦИИ</a></li>
+                </ul>
+                <a href="/">
+                    <div id="logo"></div>
+                </a>
+            </div>
+
+        </div>
+        <div class="sidebar-logo desctop-block">
+            <div alt="" class="sidebar-logo-img"></div>
+        </div>
+        <!--<div class="FW reg" id="reg">
     <div class="reg-head" >
         <div>
             <div class="reg-head-div"><h1>Регистрация</h1></div>
@@ -127,86 +139,86 @@
 </div>-->
 
 
-    <div class="FW log" id="log">
-        <div class="reg-head">
-            <div>
-                <div class="reg-head-div">
-                    <h1>Вход</h1>
-                </div>
-                <div class="reg-head-butt" id="log-butt"> x </div>
-                <br style="clear: both">
-            </div>
-
-            <form action="/member/login" method="post" id="member-login" class="gcform">
-
-                <label for="email">E-mail</label><input type="text" name="email" class="forminput" value="">
-                <br>
-                <label for="password">Пароль</label><input type="password" name="password" class="forminput" value="">
-                <input type="hidden" name="path" class="forminput" value="/">
-
-                <div class="formcontrols">
-                    <input type="submit" value="Войти" class="leftfloat">
-                    <div class="leftfloat leftpad1 controlinfo"></div>
-                    <div class="rightfloat controlstatus"></div>
-                    <br style="clear: both;">
+        <div class="FW log" id="log">
+            <div class="reg-head">
+                <div>
+                    <div class="reg-head-div">
+                        <h1>Вход</h1>
+                    </div>
+                    <div class="reg-head-butt" id="log-butt"> x </div>
+                    <br style="clear: both">
                 </div>
 
-            </form>
+                <form action="/member/login" method="post" id="member-login" class="gcform">
 
-            <p style="font-size: 16px;margin-top:10px ">
-                <a class="simplebutton" href="/member/forgot">Забыли пароль? &mdash; мы вышлем на email новый</a>
-            </p>
+                    <label for="email">E-mail</label><input type="text" name="email" class="forminput" value="">
+                    <br>
+                    <label for="password">Пароль</label><input type="password" name="password" class="forminput" value="">
+                    <input type="hidden" name="path" class="forminput" value="/">
 
-            <?php
+                    <div class="formcontrols">
+                        <input type="submit" value="Войти" class="leftfloat">
+                        <div class="leftfloat leftpad1 controlinfo"></div>
+                        <div class="rightfloat controlstatus"></div>
+                        <br style="clear: both;">
+                    </div>
+
+                </form>
+
+                <p style="font-size: 16px;margin-top:10px ">
+                    <a class="simplebutton" href="/member/forgot">Забыли пароль? &mdash; мы вышлем на email новый</a>
+                </p>
+
+                <?php
         if ($standartFormRegisterEnabled == true)
         {
             ?>
-                <p class="TM2"><a class="simplebutton" href="/member/register">Регистрация (требуется E-mail)</a></p>
-                <?php
+                    <p class="TM2"><a class="simplebutton" href="/member/register">Регистрация (требуется E-mail)</a></p>
+                    <?php
         }
         if ($oauthEnabled == true)
         {
             ?>
-                    <p class="TM1"><a class="simplebutton" href="/oauth/loginwith">Простая и быстрая регистрация через социальные сети</a></p>
-                    <?php
+                        <p class="TM1"><a class="simplebutton" href="/oauth/loginwith">Простая и быстрая регистрация через социальные сети</a></p>
+                        <?php
         }
         ?>
-        </div>
-    </div>
-
-    <div class="FW reg" id="reg">
-        <div class="reg-head">
-            <div>
-                <div class="reg-head-div">
-                    <h1>Регистрация</h1>
-                </div>
-                <div class="reg-head-butt" id="reg-butt"> x </div>
-                <br style="clear: both">
             </div>
+        </div>
 
-            <form action="/member/register" method="post" id="member-register" class="gcform">
-
-                <label for="email"><b>Ваше имя</b></label> <input type="text" name="name" class="forminput" value=""><br>
-                <label for="email"><b>Ваш e-mail</b></label> <input type="text" name="email" class="forminput" value=""><br>
-                <label for="email"><b>Пароль</b></label> <input type="password" name="providedpassword" class="forminput" value=""><br>
-                <label for="email"><b>Пароль (повторите)</b></label> <input type="password" name="providedpasswordcopy" class="forminput" value=""><br>
-                <input type="hidden" name="path" class="forminput" value="/"><br>
-
-                <br>
-
-
-                <div class="formcontrols">
-                    <input type="submit" value="Регистрация" class="leftfloat">
-                    <div class="leftfloat leftpad1 controlinfo"></div>
-                    <div class="rightfloat controlstatus"></div>
-                    <br style="clear: both;">
+        <div class="FW reg" id="reg">
+            <div class="reg-head">
+                <div>
+                    <div class="reg-head-div">
+                        <h1>Регистрация</h1>
+                    </div>
+                    <div class="reg-head-butt" id="reg-butt"> x </div>
+                    <br style="clear: both">
                 </div>
 
-            </form>
-        </div>
-    </div>
+                <form action="/member/register" method="post" id="member-register" class="gcform">
 
-    <!-- <div class="FW" style="position: fixed; z-index: 1001; top: 59px;">
+                    <label for="email"><b>Ваше имя</b></label> <input type="text" name="name" class="forminput" value=""><br>
+                    <label for="email"><b>Ваш e-mail</b></label> <input type="text" name="email" class="forminput" value=""><br>
+                    <label for="email"><b>Пароль</b></label> <input type="password" name="providedpassword" class="forminput" value=""><br>
+                    <label for="email"><b>Пароль (повторите)</b></label> <input type="password" name="providedpasswordcopy" class="forminput" value=""><br>
+                    <input type="hidden" name="path" class="forminput" value="/"><br>
+
+                    <br>
+
+
+                    <div class="formcontrols">
+                        <input type="submit" value="Регистрация" class="leftfloat">
+                        <div class="leftfloat leftpad1 controlinfo"></div>
+                        <div class="rightfloat controlstatus"></div>
+                        <br style="clear: both;">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <!-- <div class="FW" style="position: fixed; z-index: 1001; top: 59px;">
 
         <div id="smenu" class="CW">
             <div id="smenui" class="BLK">
@@ -222,93 +234,95 @@
 
 
 
-    <div id="readscreen" class="firstBlockRead">
+        <div id="readscreen" class="firstBlockRead">
 
-        <div id="headercontainer" class="BLK CW TAL TM2">
-            <h2>Як львів’яни будують сквери і рятують пам’ятки, не чекаючи влади</h2>
-            <span class="news-under-header-info"><span class="news-item-author desctop-block">Алина Авдеева / кориспондент Pravda.ua,</span> <span class="news-item-date">4 февраля <span class="news-item-date__year"> 2017,</span> 12:10</span>
-            </span>
-        </div>
-
-        <div class="textcontainer BLK CW">
-
-            <div id="anonscontainer" class="TM2 BLK 0BG">
-                <div class="anons FL" style="width: 600px; padding-left: 45px; padding-right: 100px; background-color: #fafafa">
-                    <p>
-                        <p>Відреставрована історична пам’ятка, новий сквер на місці, де раніше була парковка, звільнені від машин тротуари для проходу пішоходів, таблички з назвами зупинок – це лише частина громадських ініціатив, які були реалізовані у Львові
-                            протягом останніх двох років.</p>
-                    </p>
-                </div>
-                <div class="FL social-web-block" style="width: 245px; height: 130px; vertical-align: middle">
-                    <table width="100%" height="100%">
-                        <tr>
-                            <td valign="middle">
-                                <a href="#" class="social-web-link"><img src="img/facebook-icon.png" style="display: inline-block;"><span class="social-web-follows">2</span></a>
-                                <a href="#" class="social-web-link"> <img src="img/twitter-icon.png" style="display: inline-block;"><span class="social-web-follows">0</span></a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+            <div id="headercontainer" class="BLK CW TAL TM2">
+                <h2>Як львів’яни будують сквери і рятують пам’ятки, не чекаючи влади</h2>
+                <span class="news-under-header-info"><span class="news-item-author desctop-block">Алина Авдеева / кориспондент Pravda.ua,</span> <span class="news-item-date">4 февраля <span class="news-item-date__year"> 2017,</span> 12:10</span>
+                </span>
             </div>
 
-            <div class="text TM2">
+            <div class="textcontainer BLK CW">
+
+                <div id="anonscontainer" class="TM2 BLK 0BG">
+                    <div class="anons FL" style="width: 600px; padding-left: 45px; padding-right: 100px; background-color: #fafafa">
+                        <p>
+                            <p>Відреставрована історична пам’ятка, новий сквер на місці, де раніше була парковка, звільнені від машин тротуари для проходу пішоходів, таблички з назвами зупинок – це лише частина громадських ініціатив, які були реалізовані
+                                у Львові протягом останніх двох років.</p>
+                        </p>
+                    </div>
+                    <div class="FL social-web-block" style="width: 245px; height: 130px; vertical-align: middle">
+                        <table width="100%" height="100%">
+                            <tr>
+                                <td valign="middle">
+                                    <a href="#" class="social-web-link"><img src="img/facebook-icon.png" style="display: inline-block;"><span class="social-web-follows">2</span></a>
+                                    <a href="#" class="social-web-link"> <img src="img/twitter-icon.png" style="display: inline-block;"><span class="social-web-follows">0</span></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="text TM2">
 
 
 
 
 
-                <!--
+                    <!--
 
             -->
-                <!--<blockquote>
+                    <!--<blockquote>
                     <p><strong>Моя бабушка</strong> — Сьюзан Джонс — была из освобожденных рабов, и иногда отец брал меня к ней в Луисвилль. Она жила в домишке, который можно было перешибить плевком, и у нее не было электричества. Только колодец во дворе,
                         небольшая угольная печка и куча керосиновых ламп.</p>
                     <p><strong>Помню, что как-то раз, в детстве,</strong> мы с братом украли ящик меда, убежали с ним в лес и за один присест расправились со всем содержимым. После этого я не притрагивался к меду лет двадцать. Просто потрясающе, сколько
                         неприятностей можно найти на свою задницу, если тебе больше нечем заняться.</p>
                 </blockquote>-->
 
-                <p><img src="img/page-img.png" alt=""></p>
+                    <p><img src="img/page-img.png" alt=""></p>
 
 
-                <p>
-                    Проекти розробляються не у кабінетах чиновників, а на міських форумах і у соцмережах. Гроші не вибиваються з бюджету, а збираються від небайдужих людей на картки активістів. Так львів’яни облаштовують міський простір, не чекаючи, поки цим займеться влада
-                    або забудовники.
+                    <p>
+                        Проекти розробляються не у кабінетах чиновників, а на міських форумах і у соцмережах. Гроші не вибиваються з бюджету, а збираються від небайдужих людей на картки активістів. Так львів’яни облаштовують міський простір, не чекаючи, поки цим займеться влада
+                        або забудовники.
 
-                </p>
-                <p>
-                    Активісти рухів "Дайте пройти", "Lypneva.com" і "Врятувати Меркурія", з якими зустрівся кореспондент "Української правди. Життя", переконані: місто – це власність мешканців, і лише вони мають право вирішувати, як його облаштовувати.
-                </p>
-                <h3>
-                    ЛЬВІВ’ЯНИ, ЯКІ БУДУЮТЬ СКВЕРИ І ДИТЯЧІ МАЙДАНЧИКИ
-                </h3>
-                <p>
-                    - Люди якось звикли, що у Львові все має бути історичним. Ось, дивіться, чергове "покращення". З будинку зробили таке собі старовинне "псевдо": пофарбували у персиковий колір, заштукатуривши цеглу, поставили пластикові вікна, і ще ковку додали. У нас
-                    чомусь дуже люблять цю ковочку, - вказує на черговий архітектурний об’єкт урбаніст Дем’ян Данилюк.
-                </p>
-                <p>
-                    Його екскурсія, присвячена позитивним змінам, що відбуваються у місті завдяки громаді, поступово перетворюється на прогулянку трущобами з тематикою "рагулізми Львова". Через певний час зауваження і критика міського простору викликають легке роздратування
-                    і снобізм типового киянина: "Нам би ваші проблеми".
+                    </p>
+                    <p>
+                        Активісти рухів "Дайте пройти", "Lypneva.com" і "Врятувати Меркурія", з якими зустрівся кореспондент "Української правди. Життя", переконані: місто – це власність мешканців, і лише вони мають право вирішувати, як його облаштовувати.
+                    </p>
+                    <h3>
+                        ЛЬВІВ’ЯНИ, ЯКІ БУДУЮТЬ СКВЕРИ І ДИТЯЧІ МАЙДАНЧИКИ
+                    </h3>
+                    <p>
+                        - Люди якось звикли, що у Львові все має бути історичним. Ось, дивіться, чергове "покращення". З будинку зробили таке собі старовинне "псевдо": пофарбували у персиковий колір, заштукатуривши цеглу, поставили пластикові вікна, і ще ковку додали. У нас
+                        чомусь дуже люблять цю ковочку, - вказує на черговий архітектурний об’єкт урбаніст Дем’ян Данилюк.
+                    </p>
+                    <p>
+                        Його екскурсія, присвячена позитивним змінам, що відбуваються у місті завдяки громаді, поступово перетворюється на прогулянку трущобами з тематикою "рагулізми Львова". Через певний час зауваження і критика міського простору викликають легке роздратування
+                        і снобізм типового киянина: "Нам би ваші проблеми".
 
-                </p>
-                <p>
-                    Втім, після чергового "занурення" у міське середовище починаєш відчувати, про що йдеться:  Львів - це не лише старовинна архітектура, австрійська бруківка і смачна кава, яким його звикли бачити туристи. Це ще й вузенькі тротуари, захаращені літніми терасами
-                    кафешок і запруджені людьми, застарілий громадський транспорт та історичні будинки, які в буквальному сенсі сиплються львів’янам на голови.
+                    </p>
+                    <p>
+                        Втім, після чергового "занурення" у міське середовище починаєш відчувати, про що йдеться:  Львів - це не лише старовинна архітектура, австрійська бруківка і смачна кава, яким його звикли бачити туристи. Це ще й вузенькі тротуари, захаращені літніми терасами
+                        кафешок і запруджені людьми, застарілий громадський транспорт та історичні будинки, які в буквальному сенсі сиплються львів’янам на голови.
 
-                </p>
-                <p>
-                    Дем’ян Данилюк: "Місто – це наша власність, а міська рада – це мешканці, обрані на певний період, щоб дбати про інших мешканців. Це не якась окрема раса"
+                    </p>
+                    <p>
+                        Дем’ян Данилюк: "Місто – це наша власність, а міська рада – це мешканці, обрані на певний період, щоб дбати про інших мешканців. Це не якась окрема раса"
 
-                </p>
-                <p>
-                    - Подивіться, під’їхав під самий ресторан і перегородив прохід. От у нас всі так мислять: навіть якщо буде вільне місце за 100 метрів, я все одно припаркуюся під самими дверима, щоб бачити машину з вікна, - обурюється Дем’ян, одночасно фотографуючи джип.Зупиняємося
-                    біля чергового джипа, припаркованого на тротуарі.
-                </p>
-                <span class="news-item-author mobile-block">Алина Авдеева / кориспондент Pravda.ua</span>
+                    </p>
+                    <p>
+                        - Подивіться, під’їхав під самий ресторан і перегородив прохід. От у нас всі так мислять: навіть якщо буде вільне місце за 100 метрів, я все одно припаркуюся під самими дверима, щоб бачити машину з вікна, - обурюється Дем’ян, одночасно фотографуючи джип.Зупиняємося
+                        біля чергового джипа, припаркованого на тротуарі.
+                    </p>
+                    <span class="news-item-author mobile-block">Алина Авдеева / кориспондент Pravda.ua</span>
+                </div>
             </div>
+
+
         </div>
 
 
-    </div>
 
 
 
@@ -320,93 +334,92 @@
 
 
 
+        <div id="mainMnenia">
 
-
-    <div id="mainMnenia">
-
-        <div class="CW">
-            <ul class="news-block__list">
-                <li class="news-block__list-item">
-                    <img src="img/news-block-1.png" alt="" class="news-block__item-img">
-                    <div class="news-block__text-block">
-                        <h3 class="news-block__item-header">
-                            Стартапер, который чуть не убил Хусейна
-                        </h3>
-                        <span class="news-block__item-date">4 февраля 2017, 12:10</span>
-                    </div>
-                </li>
-                <li class="news-block__list-item">
-                    <img src="img/news-block-2.png" alt="" class="news-block__item-img">
-                    <div class="news-block__text-block">
-                        <h3 class="news-block__item-header">
-                            Зачем украинским молочникам иностранная прописка
-                        </h3>
-                        <span class="news-block__item-date">4 февраля 2017, 12:10</span>
-                    </div>
-                </li>
-                <li class="news-block__list-item">
-                    <img src="img/news-block-3.png" alt="" class="news-block__item-img">
-                    <div class="news-block__text-block">
-                        <h3 class="news-block__item-header">
-                            Зачем украинским молочникам иностранная прописка
-                        </h3>
-                        <span class="news-block__item-date">4 февраля 2017, 12:10</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-    <div class="journal">
-        <div class="container">
-            <h2 class="journal__header">Журнал “Народный депутат”</h2>
-            <div class="journal__item">
-
-                <img src="img/journal-img.png" alt="" class="journal__img">
-                <div class="journal__news-block">
-                    <h3 class="journal__news-month">ФЕВРАЛЬ</h3>
-                    <div class="journal__news-item">
-                        <a href="#" class="absolute-link"></a>
-                        <p class="journal__news-item-author">Юрій Павленко: </p>
-                        <p class="journal__news-item-text">«З безправного не виросте вільний»</p>
-                    </div>
-                    <div class="journal__news-item">
-                        <a href="#" class="absolute-link"></a>
-                        <p class="journal__news-item-author">Олег Царев:</p>
-                        <p class="journal__news-item-text">«В украине носителем власти пока еще является народ, а не еврочиновники»</p>
-                    </div>
-                    <div class="journal__news-item">
-                        <a href="#" class="absolute-link"></a>
-                        <p class="journal__news-item-author">Александр Лукашенко: </p>
-                        <p class="journal__news-item-text">«Обновление страны — путь к успеху и процветанию»</p>
-                    </div>
-                    <a href="#" class="journal__all-news-link all-news-link">Все стытьи</a>
-                </div>
-
+            <div class="CW">
+                <ul class="news-block__list">
+                    <li class="news-block__list-item">
+                        <img src="img/news-block-1.png" alt="" class="news-block__item-img">
+                        <div class="news-block__text-block">
+                            <h3 class="news-block__item-header">
+                                Стартапер, который чуть не убил Хусейна
+                            </h3>
+                            <span class="news-block__item-date">4 февраля 2017, 12:10</span>
+                        </div>
+                    </li>
+                    <li class="news-block__list-item">
+                        <img src="img/news-block-2.png" alt="" class="news-block__item-img">
+                        <div class="news-block__text-block">
+                            <h3 class="news-block__item-header">
+                                Зачем украинским молочникам иностранная прописка
+                            </h3>
+                            <span class="news-block__item-date">4 февраля 2017, 12:10</span>
+                        </div>
+                    </li>
+                    <li class="news-block__list-item">
+                        <img src="img/news-block-3.png" alt="" class="news-block__item-img">
+                        <div class="news-block__text-block">
+                            <h3 class="news-block__item-header">
+                                Зачем украинским молочникам иностранная прописка
+                            </h3>
+                            <span class="news-block__item-date">4 февраля 2017, 12:10</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="journal__item">
 
-                <img src="img/journal-img-2.png" alt="" class="journal__img">
-                <div class="journal__news-block">
-                    <h3 class="journal__news-month">ФЕВРАЛЬ</h3>
-                    <div class="journal__news-item">
-                        <a href="#" class="absolute-link"></a>
-                        <p class="journal__news-item-author">Юрій Павленко: </p>
-                        <p class="journal__news-item-text">«З безправного не виросте вільний»</p>
+        </div>
+        <div class="journal">
+            <div class="container">
+                <h2 class="journal__header">Журнал “Народный депутат”</h2>
+                <div class="journal__item">
+
+                    <img src="img/journal-img.png" alt="" class="journal__img">
+                    <div class="journal__news-block">
+                        <h3 class="journal__news-month">ФЕВРАЛЬ</h3>
+                        <div class="journal__news-item">
+                            <a href="#" class="absolute-link"></a>
+                            <p class="journal__news-item-author">Юрій Павленко: </p>
+                            <p class="journal__news-item-text">«З безправного не виросте вільний»</p>
+                        </div>
+                        <div class="journal__news-item">
+                            <a href="#" class="absolute-link"></a>
+                            <p class="journal__news-item-author">Олег Царев:</p>
+                            <p class="journal__news-item-text">«В украине носителем власти пока еще является народ, а не еврочиновники»</p>
+                        </div>
+                        <div class="journal__news-item">
+                            <a href="#" class="absolute-link"></a>
+                            <p class="journal__news-item-author">Александр Лукашенко: </p>
+                            <p class="journal__news-item-text">«Обновление страны — путь к успеху и процветанию»</p>
+                        </div>
+                        <a href="#" class="journal__all-news-link all-news-link">Все стытьи</a>
                     </div>
-                    <div class="journal__news-item">
-                        <a href="#" class="absolute-link"></a>
-                        <p class="journal__news-item-author">Олег Царев:</p>
-                        <p class="journal__news-item-text">«В украине носителем власти пока еще является народ, а не еврочиновники»</p>
-                    </div>
-                    <div class="journal__news-item">
-                        <a href="#" class="absolute-link"></a>
-                        <p class="journal__news-item-author">Александр Лукашенко: </p>
-                        <p class="journal__news-item-text">«Обновление страны — путь к успеху и процветанию»</p>
-                    </div>
-                    <a href="#" class="journal__all-news-link all-news-link">Все стытьи</a>
+
                 </div>
+                <div class="journal__item">
 
+                    <img src="img/journal-img-2.png" alt="" class="journal__img">
+                    <div class="journal__news-block">
+                        <h3 class="journal__news-month">ФЕВРАЛЬ</h3>
+                        <div class="journal__news-item">
+                            <a href="#" class="absolute-link"></a>
+                            <p class="journal__news-item-author">Юрій Павленко: </p>
+                            <p class="journal__news-item-text">«З безправного не виросте вільний»</p>
+                        </div>
+                        <div class="journal__news-item">
+                            <a href="#" class="absolute-link"></a>
+                            <p class="journal__news-item-author">Олег Царев:</p>
+                            <p class="journal__news-item-text">«В украине носителем власти пока еще является народ, а не еврочиновники»</p>
+                        </div>
+                        <div class="journal__news-item">
+                            <a href="#" class="absolute-link"></a>
+                            <p class="journal__news-item-author">Александр Лукашенко: </p>
+                            <p class="journal__news-item-text">«Обновление страны — путь к успеху и процветанию»</p>
+                        </div>
+                        <a href="#" class="journal__all-news-link all-news-link">Все стытьи</a>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -431,6 +444,8 @@
             <div class="copyright">2017&copy; copyright</div>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
